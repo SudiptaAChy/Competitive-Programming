@@ -1,0 +1,26 @@
+#include<stdio.h>
+main(void)
+{
+    int n,i,a[101],pos1,pos,even=0,odd=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        if(a[i]%2==0){
+            even++;
+            pos=i+1;
+        }
+        else
+        {
+            odd++;
+            pos1=i+1;
+        }
+    }
+    if(odd<even)
+        printf("%d",pos1);
+    else
+        printf("%d",pos);
+}

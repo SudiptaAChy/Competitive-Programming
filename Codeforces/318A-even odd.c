@@ -1,0 +1,40 @@
+#include<stdio.h>
+main(void)
+{
+    long long n,k,num,d;
+    scanf("%I64d %I64d",&n,&k);
+    if(n%2==0){
+        d=n/2;
+        if(d>=k)
+        {
+            num=(2*(k-1))+1;
+            printf("%I64d\n",num);
+        }
+        if(d<k)
+        {
+            num=(2*k)-n;
+            printf("%I64d\n",num);
+        }
+    }
+    else
+    {
+        if(k==1 && n==1)
+        {
+            printf("%I64d\n",n);
+        }
+        else
+        {
+            d=(n+1)/2;
+            if(d>=k)
+            {
+            num=2*k-1;
+            printf("%I64d\n",num);
+            }
+            if(d<k)
+            {
+                num=2*k-2*d;
+                printf("%I64d\n",num);
+            }
+        }
+    }
+}

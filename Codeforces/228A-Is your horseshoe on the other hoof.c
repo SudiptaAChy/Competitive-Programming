@@ -1,0 +1,19 @@
+#include<stdio.h>
+main(void)
+{
+    int j,a[4],i,c=0;
+    for(i=0;i<4;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<4;i++)
+    {
+        for(j=i+1;j<4;j++)
+        {
+            if(a[i]==a[j])
+                a[j]=-1;
+        }
+    }
+    for(i=0;i<4;i++)
+        if(a[i]==-1)
+            c++;
+    printf("%d",c);
+}
